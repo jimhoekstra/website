@@ -1,0 +1,20 @@
+---
+export interface Props {
+    post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<div class="border rounded bg-light my-4 p-4">
+    <h2>{post.frontmatter.title}</h2>
+    <p>{post.frontmatter.description}</p>
+    <a href={post.url}>Read more</a>
+</div>
+
+<style>
+    div {
+        padding: 1em;
+        /* border: 1px solid rgb(191, 51, 0); */
+    }
+</style>

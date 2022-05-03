@@ -1,0 +1,18 @@
+---
+import Layout from '../../components/Layout.astro';
+import BlogPostPreview from '../../components/BlogPostPreview.astro';
+
+const allPosts = await Astro.glob('./*.md');
+---
+
+<Layout title="jimhoekstra.github.io" activePage="blog">
+    <h1>Recent Posts</h1>
+
+    <div>
+        {allPosts.map((p) => <BlogPostPreview post={p} />)}
+    </div>
+</Layout>
+
+<style>
+
+</style>
