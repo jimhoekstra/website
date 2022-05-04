@@ -1,5 +1,6 @@
 ---
 import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
 import '../styles/main.css';
 
 export interface Props {
@@ -38,6 +39,17 @@ const { title, activePage } = Astro.props as Props;
 			</div>
 		</div>
 	</main>
+
+	<div class="orange-line mb-2 mt-3"></div>
+	<div class="container-md">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<Footer />
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -45,4 +57,12 @@ const { title, activePage } = Astro.props as Props;
 </html>
 
 <style>
+	main {
+		min-height: 90vh;
+	}
+
+	.orange-line {
+		height: 1px;
+		background-color: rgba(191, 51, 0, 0.3);
+	}
 </style>
