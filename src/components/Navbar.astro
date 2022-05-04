@@ -1,7 +1,7 @@
 ---
 const { activePage } = Astro.props;
 
-const baseClass = 'nav-link';
+const baseClass = 'nav-link fs-5';
 const homeClass = activePage === 'home' ? (baseClass + ' active') : baseClass;
 const blogClass = activePage === 'blog' ? baseClass + ' active' : baseClass;
 const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseClass;
@@ -22,13 +22,22 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class={homeClass} aria-current="page" href="/">Home</a>
+                <a class={homeClass} aria-current="page" href="/">
+                  <i class="bi bi-house"></i>
+                  Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class={blogClass} href="/blog">Blog</a>
+                <a class={blogClass} href="/blog">
+                  <i class="bi bi-book"></i>
+                  Blog
+                </a>
               </li>
               <li class="nav-item">
-                <a class={projectsClass} href="/projects">Projects</a>
+                <a class={projectsClass} href="/projects">
+                  <i class="bi bi-code-slash"></i>
+                  Projects
+                </a>
               </li>
             </ul>
 
@@ -43,7 +52,7 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
 
 <style>
   nav {
-      margin-bottom: 2em;
+      margin-bottom: 3.5em;
       background-color: rgb(191, 51, 0);
   }
 
