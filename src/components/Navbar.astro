@@ -15,36 +15,26 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <div class="container-md">
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class={homeClass} aria-current="page" href="/">
-                  <i class="bi bi-house"></i>
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class={blogClass} href="/blog">
-                  <i class="bi bi-book"></i>
-                  Blog
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class={projectsClass} href="/projects">
-                  <i class="bi bi-code-slash"></i>
-                  Projects
-                </a>
-              </li>
-            </ul>
-
-          </div>
-          <div class="col-md-2"></div>
-        </div>
-      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+        <li class="nav-item mx-4">
+          <a class={homeClass} aria-current="page" href="/">
+            <i class="bi bi-house"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class={blogClass} href="/blog">
+            <i class="bi bi-book"></i>
+            Blog
+          </a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class={projectsClass} href="/projects">
+            <i class="bi bi-code-slash"></i>
+            Projects
+          </a>
+        </li>
+      </ul>
       
     </div>
   </div>
