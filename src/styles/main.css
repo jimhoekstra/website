@@ -14,3 +14,8 @@ a {
 a:hover {
     color: rgb(23, 155, 255);
 }
+
+img {
+    width: 90%;
+    max-width: 500px;
+}
