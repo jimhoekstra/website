@@ -3,10 +3,44 @@ import Layout from '../components/Layout.astro';
 ---
 
 <Layout title="jimhoekstra.github.io" activePage="home">
-	<h1 class="mb-4">Hello, World! :)</h1>
-	<p class="fs-5">Welcome to jimhoekstra.github.io</p>
+	<h1 class="mb-4">Hi!</h1>
+	
+	<div class="row">
+		<div class="col-md-6">
+			<h2>About me</h2>
+			<p class="fs-5">
+				My name is Jim Hoekstra. I like to explore the possibilities of using machine learning,
+				software, and engineering to solve real-world problems. In my current position at Wageningen
+				University & Research I am applying these technologies to the food domain, focusing among
+				other things on research towards improving personalized nutritional advice.
+			</p>
+		</div>
+		<div class="col-md-1"></div>
+		<div id="profile-picture" class="col-md-4 border rounded bg-light"></div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<h2>Background</h2>
+	<div class="row">
+		<div class="col-md-6">
+			<p class="fs-5">
+				I graduated from the MSc program Artificial Intelligence at the University of Amsterdam.
+				My thesis was on the topic of reinforcement learning applied to multi-agent cooperative 
+				environments. The goal was to increase the capability of agents to learn to model and 
+				cooperate with other (adapting) agents in the environment.
+			</p>
+		</div>
+	</div>
+	
 </Layout>
 
 <style>
+	img {
+		width: 60%;
+		max-width: 400px;
+	}
 
+	#profile-picture {
+		min-height: 100px;
+	}
 </style>
