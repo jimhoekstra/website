@@ -1,9 +1,30 @@
 ---
 import Layout from './Layout.astro';
+
+export interface Props {
+    blogPost: any;
+}
+
+const { blogPost } = Astro.props;
+const BlogPostContent = blogPost.Content;
+const blogHeaders = await blogPost.getHeaders();
 ---
 
 <Layout title="jimhoekstra.github.io" activePage="blog">
-	<div class="fs-5">
-		<slot />
+	<div class="d-flex align-items-start">
+		
+		<div class="pe-4 w-75">
+			<BlogPostContent />
+		</div>
+
+		<div class="fs-5 sticky-top d-none d-lg-block py-5">
+			<div class="border-start p-3">
+				<p>On this page</p>
+				<ul>
+					{blogHeaders.map((header) => <li><a href={'#' + header.slug} class="fs-6">{header.text}</a></li> )}
+				</ul>
+			</div>
+		</div>
+
 	</div>
 </Layout>

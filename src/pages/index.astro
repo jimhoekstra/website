@@ -6,7 +6,7 @@ import Layout from '../components/Layout.astro';
 	<h1 class="mb-4">Hi!</h1>
 	
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg-6">
 			<h2>About me</h2>
 			<p class="fs-5">
 				My name is Jim Hoekstra. I like to explore the possibilities of using machine learning,
@@ -15,14 +15,14 @@ import Layout from '../components/Layout.astro';
 				other things on research towards improving personalized nutritional advice.
 			</p>
 		</div>
-		<div class="col-md-1"></div>
-		<div id="profile-picture" class="col-md-4 border rounded bg-light"></div>
-		<div class="col-md-1"></div>
+		<div class="col-lg-1 d-none d-lg-block"></div>
+		<div id="profile-picture" class="col-lg-4 border rounded bg-light d-none d-lg-block"></div>
+		<div class="col-lg-1 d-none d-lg-block"></div>
 	</div>
 
 	<h2>Background</h2>
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg-6">
 			<p class="fs-5">
 				I graduated from the MSc program Artificial Intelligence at the University of Amsterdam.
 				My thesis was on the topic of reinforcement learning applied to multi-agent cooperative 
@@ -42,5 +42,6 @@ import Layout from '../components/Layout.astro';
 
 	#profile-picture {
 		min-height: 100px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
 </style>

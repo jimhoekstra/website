@@ -2,7 +2,8 @@
 import Layout from '../../components/Layout.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 
-let allPosts = await Astro.glob('./*.md');
+let allPosts = await Astro.glob('../../components/blogPosts/*.md');
+
 allPosts.sort((a, b) => {
     const dateA = new Date(a.frontmatter.year, a.frontmatter.month, a.frontmatter.day);
     const dateB = new Date(b.frontmatter.year, b.frontmatter.month, b.frontmatter.day);

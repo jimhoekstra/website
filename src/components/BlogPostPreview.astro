@@ -4,17 +4,21 @@ export interface Props {
 }
 
 const { post } = Astro.props;
+
+const postHeaders = await post.getHeaders();
 ---
 
-<div class="border rounded bg-light mb-4 p-4">
+<div id="blog-post-preview" class="border rounded bg-light mb-4 p-4">
     <h2 class="mb-0">{post.frontmatter.title}</h2>
     <div class="fs-6 text-dark text-opacity-50 mb-3">
         {post.frontmatter.day}-{post.frontmatter.month}-{post.frontmatter.year} | {post.frontmatter.series}
     </div>
     <p class="fs-5">{post.frontmatter.description}</p>
-    <a class="fs-5" href={post.url}>Read more</a>
+    <a class="fs-5" href={post.frontmatter.pageURL}>Read more</a>
 </div>
 
 <style>
-
+    #blog-post-preview:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 </style>
