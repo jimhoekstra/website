@@ -1,7 +1,7 @@
 ---
 const { activePage } = Astro.props;
 
-const baseClass = 'nav-link fs-5';
+const baseClass = 'nav-link';
 const homeClass = activePage === 'home' ? (baseClass + ' active') : baseClass;
 const blogClass = activePage === 'blog' ? baseClass + ' active' : baseClass;
 const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseClass;
@@ -16,7 +16,7 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav mx-auto fs-5">
         <li class="nav-item mx-3">
           <a class={homeClass} aria-current="page" href="/">
             <i class="bi bi-house"></i>

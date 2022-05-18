@@ -13,8 +13,8 @@ const postHeaders = await post.getHeaders();
     <div class="fs-6 text-dark text-opacity-50 mb-3">
         {post.frontmatter.day}-{post.frontmatter.month}-{post.frontmatter.year} | {post.frontmatter.series}
     </div>
-    <p class="fs-5">{post.frontmatter.description}</p>
-    <a class="fs-5" href={post.frontmatter.pageURL}>Read more</a>
+    <p>{post.frontmatter.description}</p>
+    <a href={post.frontmatter.pageURL}>Read more</a>
 </div>
 
 <style>
