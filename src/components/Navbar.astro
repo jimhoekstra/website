@@ -17,19 +17,19 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mx-auto fs-5">
-        <li class="nav-item mx-3">
+        <li class="nav-item mx-3 my-1">
           <a class={homeClass} aria-current="page" href="/">
             <i class="bi bi-house"></i>
             Home
           </a>
         </li>
-        <li class="nav-item mx-3">
+        <li class="nav-item mx-3 my-1">
           <a class={blogClass} href="/blog">
             <i class="bi bi-book"></i>
             Blog
           </a>
         </li>
-        <li class="nav-item mx-3">
+        <li class="nav-item mx-3 my-1">
           <a class={projectsClass} href="/projects">
             <i class="bi bi-code-slash"></i>
             Projects
@@ -45,10 +45,5 @@ const projectsClass = activePage === 'projects' ? baseClass + ' active' : baseCl
   nav {
       margin-bottom: 3.5em;
       background-color: rgb(191, 51, 0);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-item {
-      padding: 0 0.5em;
   }
 </style>
